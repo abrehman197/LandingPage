@@ -58,13 +58,13 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background: url('Images/main.jpg') center/cover no-repeat;
-  display: flex;
+  background: url('Images/main.jpg') center center / cover no-repeat;
+   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
-  padding-top: 60px;
+  padding: 80px 20px 20px; /* top padding ensures content below nav */
 }
 .overlay {
   position: absolute;
@@ -157,26 +157,6 @@ body {
   border-radius: 2px;
 }
 
-
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .about-container {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .about-left,
-  .about-right {
-    width: 100%;
-    text-align: center;
-  }
-  .about-left h2 {
-    font-size: 2.5rem;
-  }
-}
-
-
-
 /* Products */
 .products {
   padding: 80px 20px;
@@ -256,17 +236,6 @@ body {
   line-height: 1.5;
 }
 
-/* Responsive for small devices */
-@media (max-width: 768px) {
-  .product-item {
-    flex-direction: column !important;
-    text-align: center;
-  }
-
-  .product-info {
-    text-align: center;
-  }
-}
 /* Contact Section */
 .contact {
   padding: 80px 20px;
@@ -371,17 +340,6 @@ body {
   color: white;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 /* Hamburger Menu */
 .menu-toggle {
@@ -396,8 +354,24 @@ body {
 
 /* Show toggle button and hide nav-links on small screens */
 @media (max-width: 768px) {
+  .product-item {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .product-info {
+    text-align: center;
+  }
   .menu-toggle {
     display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav-links {
@@ -426,5 +400,34 @@ body {
 
   .navbar {
     padding: 15px 20px;
+  }
+  .about-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .about-left,
+  .about-right {
+    width: 100%;
+    text-align: center;
+  }
+  .about-left h2 {
+    font-size: 2.5rem;
+  }
+  .hero {
+    padding: 100px 20px 40px;
+    text-align: center;
+  }
+
+  .brand-name {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
